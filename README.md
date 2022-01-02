@@ -12,14 +12,14 @@ That's one of the reasons your contributions are more than welcome.
 Because forking seems easier than getting python-mecab-ko to run by now.
 
 ## Requirements
-* python >= 3.6
+* python >= 3.6 (tested with 3.10)
 * jamo
 * kiwipiepy
 * nltk
 
 ## Installation
 ```
-pip install g2pk
+pip install git+https://github.com/ketzu/g2pk.git
 ```
 
 ## Main features & Usage
