@@ -2,9 +2,9 @@
 
 g2p means a task that converts graphemes to phonemes. Hangul, the main script for Korean, is phonetic, but the pronunciation rules are notoriously complicated.
 So it is never easy to learn how to read a text in Korean. That's why g2p is necessary in various nlp tasks like TTS.
-. There's a open source g2p library for Korean, [KoG2P](https://github.com/scarletcho/KoG2P). It is 
+There's an open source g2p library for Korean, [KoG2P](https://github.com/scarletcho/KoG2P). It is 
 simple and works well, but I think we need a better one. Please read through the following section (main features and usage)
-to understand the philosophy of g2pK and how to use g2pK. We know it is not perfect in present. 
+to understand the philosophy of g2pK and how to use g2pK. We know it is not perfect in  the present. 
 That's one of the reasons your contributions are more than welcome.
 
 ## Fork to use kiwipiepy
@@ -114,7 +114,7 @@ This is possible due to [cmu pronouncing dictionary](http://www.speech.cs.cmu.ed
 
 ## References
 
-If you use our software for research, please cite:
+If you use this software for research, please cite the original authors:
 
 ```
 @misc{park2019g2pk,
