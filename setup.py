@@ -6,21 +6,20 @@ with open("README.md", mode="r", encoding="utf-8") as fh:
 REQUIRED_PACKAGES = [
     'jamo',
     'nltk',
-    'konlpy',
-    'python-mecab-ko',
+    'kiwipiepy',
 ]
 
 setuptools.setup(
     name="g2pK",
     version="0.9.3",
-    author="Kyubyong Park",
-    author_email="kbpark.linguist@gmail.com",
+    author="(Original author: Kyubyong Park)",
+    author_email="(original author: kbpark.linguist@gmail.com)",
     description="g2pK: g2p module for Korean",
     install_requires=REQUIRED_PACKAGES,
     license='Apache License 2.0',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Kyubyong/g2pK",
+    url="https://github.com/ketzu/g2pK",
     packages=setuptools.find_packages(),
     package_data={'g2pk': ['g2pk/idioms.txt', 'g2pk/rules.txt', 'g2pk/table.csv']},
     python_requires=">=3.6",
@@ -34,5 +33,8 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
     ],
 )

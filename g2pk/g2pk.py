@@ -6,7 +6,7 @@ https://github.com/kyubyong/g2pK
 import os, re
 
 import nltk
-import mecab
+import kiwipiepy
 from jamo import h2j
 from nltk.corpus import cmudict
 
@@ -25,7 +25,7 @@ from g2pk.numerals import convert_num
 
 class G2p(object):
     def __init__(self):
-        self.mecab = self.get_mecab()
+        self.kiwi = self.get_kiwi()
         self.table = parse_table()
 
         self.cmu = cmudict.dict() # for English
@@ -33,12 +33,12 @@ class G2p(object):
         self.rule2text = get_rule_id2text() # for comments of main rules
         self.idioms_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "idioms.txt")
 
-    def get_mecab(self):
+    def get_kiwi(self):
         try:
-            return mecab.MeCab()
+            return kiwipiepy.Kiwi()
         except Exception as e:
             raise Exception(
-                'If you want to install mecab, The command is... pip install python-mecab-ko'
+                'If you want to install kiwipiepy, The command is... pip install kiwipiepy'
             )
 
     def idioms(self, string, descriptive=False, verbose=False):
@@ -98,7 +98,7 @@ class G2p(object):
         string = convert_eng(string, self.cmu)
 
         # 3. annotate
-        string = annotate(string, self.mecab)
+        string = annotate(string, self.kiwi)
 
         # 4. Spell out arabic numbers
         string = convert_num(string)

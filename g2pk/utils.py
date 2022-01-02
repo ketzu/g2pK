@@ -160,17 +160,17 @@ def parse_table():
 
 
 ############## Preprocessing ##############
-def annotate(string, mecab):
+def annotate(string, kiwi):
     '''attach pos tags to the given string using Mecab
-    mecab: mecab object
+    kiwi: kiwi object from kiwipiepy
     '''
-    tokens = mecab.pos(string)
-    if string.replace(" ", "") != "".join(token for token, _ in tokens):
+    tokens = kiwi.tokenize(string)
+    if string.replace(" ", "") != "".join(token for token, _, _, _ in tokens):
         return string
     blanks = [i for i, char in enumerate(string) if char == " "]
 
     tag_seq = []
-    for token, tag in tokens:
+    for token, tag, _, _ in tokens:
         tag = tag.split("+")[-1]
         if tag=="NNBC": # bound noun
             tag = "B"

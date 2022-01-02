@@ -1,7 +1,3 @@
-[![image](https://img.shields.io/pypi/v/g2pk.svg)](https://pypi.org/project/g2pk/)
-[![image](https://img.shields.io/pypi/l/g2pk.svg)](https://pypi.org/project/g2pk/)
-[![image](https://img.shields.io/pypi/pyversions/g2pk.svg)](https://pypi.org/project/g2pk/)
-
 # g2pK: g2p module for Korean
 
 g2p means a task that converts graphemes to phonemes. Hangul, the main script for Korean, is phonetic, but the pronunciation rules are notoriously complicated.
@@ -11,11 +7,14 @@ simple and works well, but I think we need a better one. Please read through the
 to understand the philosophy of g2pK and how to use g2pK. We know it is not perfect in present. 
 That's one of the reasons your contributions are more than welcome.
 
+## Fork to use kiwipiepy
+
+Because forking seems easier than getting python-mecab-ko to run by now.
+
 ## Requirements
 * python >= 3.6
 * jamo
-* [python-mecab-ko](https://github.com/jonghwanhyeon/python-mecab-ko)
-* konlpy
+* kiwipiepy
 * nltk
 
 ## Installation
